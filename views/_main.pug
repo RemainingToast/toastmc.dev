@@ -4,12 +4,12 @@ html
 	head
 		include includes/head
 	body
-		.row#header-row
+		.row.big3#header-row
 			include components/header
-		.row#primary-row
+		.row.big3#primary-row: #content
 			block content
 				center: h1 Coming soon!
 			block scripts
 				include includes/scripts
-		.row#footer-row
+		.row.big3#footer-row
 			include components/footer

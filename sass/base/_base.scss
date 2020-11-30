@@ -1,3 +1,33 @@
 body {
   background-color: $background-color;
 }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row.big3#header-row, .row.big3#footer-row {
+  flex: 0 1 auto;
+  width: 80%;
+}
+
+.row.big3#primary-row {
+  flex: 1 1 auto;
+}
+
+#content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.icon-link {
+  font-size: 6em;
+  padding: 0 16px;
+}

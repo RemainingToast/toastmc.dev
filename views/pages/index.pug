@@ -3,8 +3,18 @@ block title
 	title Home - tycrek
 block content
 	center
-		h1 Hello.
-		p This site is under construction *dabs on em*
+		img(src='/images/tycrek-animated.gif' alt='animated profile icon')
+		h1#tycrek-name tycrek
+		#links
+			+link('website', 'https://jmoore.dev', 'fas fa-globe')
+			+link('email', 'mailto:josh.moore@jmoore.dev', 'fas fa-envelope')
+			+link('github', 'https://github.com/tycrek', 'fab fa-github')
+			+link('discord', 'https://discord.bio/p/tycrek', 'fab fa-discord')
+			+link('youtube', 'https://www.youtube.com/channel/UC7jkajSJgWpKQUPBPqW93wQ', 'fab fa-youtube')
+			+link('twitch', 'https://www.twitch.tv/tycrek', 'fab fa-twitch')
+			+link('twitter', 'https://twitter.com/tycrek', 'fab fa-twitter')
+			+link('steam', 'https://steamcommunity.com/id/tycrek/', 'fab fa-steam')
+			+link('spotify', 'https://open.spotify.com/user/nj8ajwl8yapcaw4p0t9bqi0rc', 'fab fa-spotify')
 block append scripts
 	//- Links to any extra external or inline scripts/stylesheets.
 		Can use either block to replace all defaults (not recommended!)

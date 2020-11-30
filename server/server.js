@@ -8,7 +8,8 @@ const app = express();
 const CONFIG = {
 	views: path('../views/pages'),
 	static: path('../static'),
-	images: path('../images')
+	images: path('../images'),
+	icon: path('../images/icons/favicon.ico')
 };
 
 // Only allow paths ending in trailing slash (/) (except for direct file paths)
@@ -27,7 +28,7 @@ app.use(require('helmet')({
 	contentSecurityPolicy: false
 }));
 app.use(require('express-pino-logger')({ logger: log }));
-//app.use(require('serve-favicon')(CONFIG.icon)); //TODO
+app.use(require('serve-favicon')(CONFIG.icon));
 
 // Static Express routes (for JavaScript, images, robots.txt, manifests, etc.)
 app.use(express.static(CONFIG.static));

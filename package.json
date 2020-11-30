@@ -1,0 +1,36 @@
+{
+  "name": "tycrek.com",
+  "version": "1.0.0",
+  "description": "Landing page for my username",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node ./server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tycrek/tycrek.com.git"
+  },
+  "author": "tycrek",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/tycrek/tycrek.com/issues"
+  },
+  "homepage": "https://github.com/tycrek/tycrek.com#readme",
+  "dependencies": {
+    "@node-minify/core": "^6.1.0",
+    "@node-minify/uglify-es": "^6.1.0",
+    "cluster": "^0.7.7",
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-pino-logger": "^5.0.0",
+    "fs-extra": "^9.0.1",
+    "helmet": "^4.2.0",
+    "node-sass": "^5.0.0",
+    "pino": "^6.7.0",
+    "pino-pretty": "^4.3.0",
+    "pug": "^3.0.0",
+    "serve-favicon": "^2.5.0"
+  }
+}

@@ -1,0 +1,15 @@
+include includes/mixins
+doctype html
+html
+	head
+		include includes/head
+	body
+		.row#header-row
+			include components/header
+		.row#primary-row
+			block content
+				center: h1 Coming soon!
+			block scripts
+				include includes/scripts
+		.row#footer-row
+			include components/footer

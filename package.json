@@ -5,6 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node ./server/server.js",
+    "update": "sudo bash update.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

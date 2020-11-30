@@ -23,7 +23,8 @@ app.enable('case sensitive routing');
 	modern Favicon serving */
 app.use(require('compression')());
 app.use(require('helmet')({
-	frameguard: false
+	frameguard: false,
+	contentSecurityPolicy: false
 }));
 app.use(require('express-pino-logger')({ logger: log }));
 //app.use(require('serve-favicon')(CONFIG.icon)); //TODO

@@ -27,7 +27,19 @@ html, body {
   align-items: center;
 }
 
+#links {
+  margin: 0 64px;
+  @include device('desktop') {
+    margin: unset;
+  }
+}
+
 a.icon-link {
-  font-size: 6em;
   padding: 0 16px;
+  font-size: 3em;
+  line-height: 1.5;
+  @include device('desktop') {
+    font-size: 6em;
+    line-height: unset;
+  }
 }

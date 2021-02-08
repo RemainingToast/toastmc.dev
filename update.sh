@@ -16,7 +16,7 @@ npm i\
 # Fix permissions
 echo
 echo 'Fixing permissions...'
-chown -R nodejs:nodejs .\
+chown -R nodejs:nodejs . && chmod -R 644 .\
 && echo 'Done'\
 || echo 'Failed'
 

@@ -25,7 +25,7 @@ router.get('*', (req, res, next) => {
 		return res.redirect(301, url + '/');
 
 	let page = url === '/' ? 'index' : url.substring(1, url.length - 1);
-	res.render(page, {
+	res.render('index', {
 		isProd: process.env.NODE_ENV === 'production'
 	});
 });

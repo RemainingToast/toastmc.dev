@@ -1,7 +1,5 @@
 const Path = require('path');
-const log = require('pino')({
-	prettyPrint: process.env.NODE_ENV === 'production' ? false : true
-});
+const log = require('pino')({ prettyPrint: process.env.NODE_ENV !== 'production' });
 
 module.exports = {
 	log,

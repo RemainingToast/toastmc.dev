@@ -1,8 +1,5 @@
 const { log, path } = require('./utils');
-const fs = require('fs-extra');
 const Sass = require('node-sass');
-const minify = require('@node-minify/core');
-const uglify = require('@node-minify/uglify-es');
 const router = require('express').Router();
 
 module.exports = router;

@@ -4,6 +4,7 @@
   "description": "Landing page for my username",
   "main": "server/server.js",
   "scripts": {
+    "docker": "npm rebuild node-sass && npm start",
     "start": "node ./server/server.js",
     "update": "sudo bash update.sh",
     "test": "echo \"Error: no test specified\" && exit 1"

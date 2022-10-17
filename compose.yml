@@ -1,0 +1,10 @@
+services:
+  tycrekcom:
+    build: .
+    container_name: tycrekcom
+    restart: unless-stopped
+    ports:
+      - "8237:8237"
+    tty: true
+    environment:
+      - NODE_ENV=production

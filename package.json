@@ -14,7 +14,7 @@
     "url": "git+https://github.com/tycrek/tycrek.com.git"
   },
   "author": "tycrek",
-  "license": "GPL-3.0-or-later",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/tycrek/tycrek.com/issues"
   },

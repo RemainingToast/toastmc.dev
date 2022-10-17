@@ -1,4 +1,4 @@
-require('dotenv').config();
+const PORT = 8237;
 
 const { log, path } = require('./utils');
 const cluster = require('cluster');
@@ -61,5 +61,5 @@ function masterThread() {
 
 // Thread for worker (spawned by master thread at launch or after another thread crashed)
 function workerThread() {
-	app.listen(process.env.PORT, () => log.info(`Server hosted (0.0.0.0:${process.env.PORT}) [${cluster.worker.id}]`));
+	app.listen(PORT, () => log.info(`Server hosted (0.0.0.0:${PORT}) [${cluster.worker.id}]`));
 }

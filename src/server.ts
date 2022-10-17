@@ -8,7 +8,6 @@ import { facked } from '@tycrek/facked-awesome';
 import tailwindcss from 'tailwindcss';
 import express from 'express';
 import helmet from 'helmet';
-import { execSync } from 'child_process';
 
 const pkg: { name: string, version: string } = fs.readJsonSync(path('package.json'));
 
@@ -36,9 +35,7 @@ app.use(helmet({
 // Favicon
 app.use(favi(path('images/icons/favicon.ico')));
 
-// Static & images
-app.use(express.static(path('static')));
-app.use('/assets', express.static(path('assets')));
+// Images
 app.use('/images', express.static(path('images')));
 
 app.listen(PORT, () => log.info(`Server hosted (0.0.0.0:${PORT})`));

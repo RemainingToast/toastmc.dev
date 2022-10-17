@@ -4,15 +4,29 @@
 
 @layer base {
 	body {
-		@apply font-main;
+		@apply	w-full h-screen
+				flex-center flex-col gap-12
+				font-main text-text bg-background;
+	}
+
+	img {
+		@apply	w-[80%] md_w-60 max-w-[15rem] mx-8 rounded-full;
 	}
 }
 
 @layer components {
-	.flex-center {
-		@apply flex justify-center items-center;
+	.title {
+		@apply	text-5xl md_text-8xl font-bold tracking-widest;
+	}
+
+	.icon-container {
+		@apply	flex-center flex-wrap gap-4 md_gap-6
+				px-4 text-5xl md_text-8xl;
 	}
 }
 
 @layer utilities {
+	.flex-center {
+		@apply	flex justify-center items-center;
+	}
 }

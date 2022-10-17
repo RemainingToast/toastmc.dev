@@ -1,23 +1,18 @@
 {
   "name": "tycrek.com",
-  "version": "1.0.0",
+  "version": "2.0.0-indev",
   "description": "Landing page for my username",
-  "main": "server/server.js",
+  "main": "dist/app.js",
   "scripts": {
     "docker": "npm rebuild node-sass && npm start",
     "start": "node ./server/server.js",
     "update": "sudo bash update.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tycrek/tycrek.com.git"
-  },
+  "repository": "github:tycrek/tycrek.com",
   "author": "tycrek",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tycrek/tycrek.com/issues"
-  },
+  "bugs": "https://github.com/tycrek/tycrek.com/issues",
   "homepage": "https://github.com/tycrek/tycrek.com#readme",
   "dependencies": {
     "@tsconfig/node16": "^1.0.3",

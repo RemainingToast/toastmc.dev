@@ -38,8 +38,6 @@ app.use(favi(path('images/icons/favicon.ico')));
 // Images
 app.use('/images', express.static(path('images')));
 
-app.listen(PORT, () => log.info(`Server hosted (0.0.0.0:${PORT})`));
-
 // CSS
 app.use('/css', epcss({
 	cssPath: path('tailwind.css'),

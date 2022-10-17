@@ -1,0 +1,21 @@
+mixin link(network, url, icon)
+	a.icon-link(href=url id=network + '-icon' target='_blank' rel='noopener'): i(class=icon)
+doctype html
+html
+	head
+		include head
+	body.flex-center.w-full.h-screen: #content
+			center
+				img.w-48#profile-icon(src='/images/avatar-red.jpg' alt='profile icon')
+				h1#tycrek-name tycrek
+				#links
+					+link('website', 'https://jmoore.dev', 'fas fa-globe')
+					+link('email', 'mailto:t@tycrek.com', 'fas fa-envelope')
+					+link('github', 'https://github.com/tycrek', 'fab fa-github')
+					+link('discord', 'https://discord.bio/p/tycrek', 'fab fa-discord')
+					+link('youtube', 'https://www.youtube.com/channel/UC7jkajSJgWpKQUPBPqW93wQ', 'fab fa-youtube')
+					+link('twitch', 'https://www.twitch.tv/tycrek', 'fab fa-twitch')
+					+link('twitter', 'https://twitter.com/tycrek', 'fab fa-twitter')
+					+link('steam', 'https://steamcommunity.com/id/tycrek/', 'fab fa-steam')
+					+link('spotify', 'https://open.spotify.com/user/nj8ajwl8yapcaw4p0t9bqi0rc', 'fab fa-spotify')
+					+link('patreon', 'https://www.patreon.com/tycrek', 'fab fa-patreon')

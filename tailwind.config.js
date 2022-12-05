@@ -13,6 +13,7 @@ const twitter = '#1da1f2';
 const steam = '#C5C3C0';
 const spotify = '#1DB954';
 const patreon = '#FF424D';
+const mastodon = '#595AFF';
 
 module.exports = {
 	separator: '_',
@@ -37,7 +38,8 @@ module.exports = {
 				twitter,
 				steam,
 				spotify,
-				patreon
+				patreon,
+				mastodon
 			},
 			width: {
 			},

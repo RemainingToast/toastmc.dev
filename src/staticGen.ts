@@ -25,9 +25,9 @@ const pugRender = (pugFilename: string, cssFilename: string) =>
 function staticGen() {
 	const pugFilename = 'views/index.pug';
 	const cssFilename = 'tailwind.css';
-	const htmlFilename = 'index.html';
+	const htmlFilename = 'html/index.html';
 	return pugRender(pugFilename, cssFilename)
-		.then((html) => fs.writeFile(path(htmlFilename), html))
+		.then((html) => (fs.ensureFileSync(path(htmlFilename)), fs.writeFile(path(htmlFilename), html)))
 		.then(() => log.info(`Generated ${htmlFilename}`))
 		.catch((err) => log.error(err));
 }

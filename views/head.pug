@@ -9,10 +9,11 @@ meta(name='keywords', content='tycrek,josh,moore,jmoore')
 meta(name='author', content='tycrek')
 
 //- CSS
-link(rel='stylesheet', href='/css', type='text/css')
+style
+	!= css
 
 //- Scripts
-script(src='/facked.js', type='text/javascript')
+script(src='https://kit.fontawesome.com/bbe1d43ee9.js' crossorigin='anonymous')
 
 if isProd
 	script(async defer data-website-id='7625f992-ba2f-4dc0-afd8-fdb49f1adb4f' src='https://umami.jmoore.dev/umami.js')

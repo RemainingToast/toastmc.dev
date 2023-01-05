@@ -1,39 +1,15 @@
 {
   "name": "tycrek.com",
-  "version": "2.0.0-indev",
+  "version": "3.0.0",
   "description": "Landing page for my username",
   "main": "dist/server.js",
-  "scripts": {
-    "dev": "npm run build && npm run start",
-    "build": "tsc",
-    "start": "node .",
-    "update": "sudo bash update.sh",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "static": "npm run build && node dist/staticGen.js"
-  },
+  "scripts": {},
   "repository": "github:tycrek/tycrek.com",
   "author": "tycrek",
   "license": "ISC",
   "bugs": "https://github.com/tycrek/tycrek.com/issues",
   "homepage": "https://github.com/tycrek/tycrek.com#readme",
   "dependencies": {
-    "@tsconfig/node16": "^1.0.3",
-    "@tycrek/express-postcss": "^0.3.0",
-    "@tycrek/facked-awesome": "^0.1.1",
-    "@tycrek/isprod": "^3.0.2",
-    "@tycrek/log": "^0.6.0-7",
-    "@tycrek/nofavicon": "^2.0.0",
-    "@types/node": "^18.11.0",
-    "@types/pug": "^2.0.6",
-    "autoprefixer": "^10.4.12",
-    "cssnano": "^5.1.13",
-    "express": "^4.17.1",
-    "fs-extra": "^10.1.0",
-    "helmet": "^4.2.0",
-    "postcss": "^8.4.20",
-    "postcss-font-magician": "^3.0.0",
-    "pug": "^3.0.2",
-    "tailwindcss": "^3.1.8",
-    "typescript": "^4.8.4"
+    "pagery": "^0.0.6"
   }
 }

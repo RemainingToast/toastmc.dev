@@ -3,13 +3,15 @@
   "version": "3.0.0",
   "description": "Landing page for my username",
   "main": "dist/server.js",
-  "scripts": {},
+  "scripts": {
+    "pagery": "node ./node_modules/pagery/dist/pagery.js"
+  },
   "repository": "github:tycrek/tycrek.com",
   "author": "tycrek",
   "license": "ISC",
   "bugs": "https://github.com/tycrek/tycrek.com/issues",
   "homepage": "https://github.com/tycrek/tycrek.com#readme",
   "dependencies": {
-    "pagery": "^0.0.6"
+    "pagery": "^0.1.0"
   }
 }

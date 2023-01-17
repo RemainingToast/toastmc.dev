@@ -1,23 +1,48 @@
-mixin link(network, url, icon)
-	a(href=url class=`text-${network}` target='_blank' rel='noopener'): i(class=icon)
+mixin slLink(name, url, icon)
+	sl-tooltip(content=name): sl-icon-button(name=icon label=name href=url target='_blank' class=`text-${name.toLowerCase()}` library='fa')
+mixin slModal(name, onclick, icon)
+	sl-tooltip(content=name): sl-icon-button(name=icon label=name onclick!=onclick class=`text-${name.toLowerCase()} modal` library='fa')
+
 doctype html
-html
+html.sl-theme-dark
 	head
 		include head
 	body
-		img(src='https://imagedelivery.net/cNsTmYlz178gQNL42swQfw/ce95000e-2c51-492d-4e63-b8d4025a5800/public' alt='profile icon')
+		img(src=data.data.avatar alt='profile icon')
 		h1.title tycrek
 		.icon-container
-			+link('website', 'https://jmoore.dev', 'fas fa-globe')
-			+link('email', 'mailto:t@tycrek.com', 'fas fa-envelope')
-			+link('github', 'https://github.com/tycrek', 'fab fa-github')
-			+link('discord', 'https://discord.bio/p/tycrek', 'fab fa-discord')
-			+link('patreon', 'https://www.patreon.com/tycrek', 'fab fa-patreon')
-			+link('twitter', 'https://twitter.com/tycrek', 'fab fa-twitter')
-			+link('youtube', 'https://www.youtube.com/channel/UC7jkajSJgWpKQUPBPqW93wQ', 'fab fa-youtube')
-			+link('twitch', 'https://www.twitch.tv/tycrek', 'fab fa-twitch')
-			+link('spotify', 'https://open.spotify.com/user/nj8ajwl8yapcaw4p0t9bqi0rc', 'fab fa-spotify')
-			+link('steam', 'https://steamcommunity.com/id/tycrek/', 'fab fa-steam')
+			+slLink('Website', 'https://jmoore.dev', 'fas-globe')
+			+slLink('Email', 'mailto:t@tycrek.com', 'fas-envelope')
+			+slLink('GitHub', 'https://github.com/tycrek', 'fab-github')
+			+slModal('Discord', 'return;', 'fab-discord')
+			+slLink('Patreon', 'https://www.patreon.com/tycrek', 'fab-patreon')
+			+slLink('Twitter', 'https://twitter.com/tycrek', 'fab-twitter')
+			+slLink('YouTube', 'https://www.youtube.com/channel/UC7jkajSJgWpKQUPBPqW93wQ', 'fab-youtube')
+			+slLink('Twitch', 'https://www.twitch.tv/tycrek', 'fab-twitch')
+			+slLink('Spotify', 'https://open.spotify.com/user/nj8ajwl8yapcaw4p0t9bqi0rc', 'fab-spotify')
+			+slLink('Steam', 'https://steamcommunity.com/id/tycrek/', 'fab-steam')
+
+		sl-dialog#discord-modal(label='Contact via Discord')
+			h2.text-xl.font-lato To reach me on Discord, you can try to DM me at #[span.font-space tycrek#0001], but I can't guarantee replies.
+
+		include fontAwesomeScript
+		script.
+			const modal = document.querySelector('#discord-modal');
+			document.querySelector('.text-discord.modal').addEventListener('click', () => modal.show());
+
+		style.
+			.icon-container sl-icon-button::part(base) {
+				color: currentColor;
+			}
+			.icon-container sl-icon-button::part(base):hover,
+			.icon-container sl-icon-button::part(base):focus {
+				color: currentColor;
+				opacity: 0.5;
+			}
+			.icon-container sl-icon-button::part(base):active {
+				color: currentColor;
+				opacity: 0.75;
+			}
 
 	.hidden
 		//- hidden colour divs for Tailwind

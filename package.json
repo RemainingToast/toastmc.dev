@@ -4,7 +4,7 @@
   "description": "Landing page for my username",
   "main": "dist/server.js",
   "scripts": {
-    "pagery": "node ./node_modules/pagery/dist/pagery.js"
+    "pagery": "node ./node_modules/pagery/dist/pagery.js --data=data.json"
   },
   "repository": "github:tycrek/tycrek.com",
   "author": "tycrek",

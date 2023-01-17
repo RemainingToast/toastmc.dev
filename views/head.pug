@@ -2,7 +2,7 @@
 meta(charset='utf-8')
 title tycrek's Social Hub
 meta(name='description', content="tycrek's link hub. Get to any of my profiles from here.")
-link(rel='icon' href='https://imagedelivery.net/cNsTmYlz178gQNL42swQfw/ce95000e-2c51-492d-4e63-b8d4025a5800/public')
+link(rel='icon' href=data.data.avatar)
 
 //- Device/SEO meta
 meta(name='viewport', content='width=device-width,initial-scale=1.0,viewport-fit=cover')
@@ -14,5 +14,14 @@ style
 	!= css
 
 //- Scripts
-script(src='https://kit.fontawesome.com/17a5ca0d54.js' crossorigin='anonymous')
 script(async defer data-website-id='7625f992-ba2f-4dc0-afd8-fdb49f1adb4f' src='https://umami.jmoore.dev/umami.js')
+
+//- Shoelace
+mixin slComp(name)
+	script(type='module' src=`${data.data.shoelaceCdn}/dist/components/${name}/${name}.js`)
+
+link(rel='stylesheet' href=`${data.data.shoelaceCdn}/dist/themes/dark.css`)
++slComp('dialog')
++slComp('icon')
++slComp('icon-button')
++slComp('tooltip')

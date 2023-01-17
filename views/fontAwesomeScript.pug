@@ -1,0 +1,21 @@
+//- Font Awesome self-hosted SVGs via Cloudflare Pages 
+//- see: CF Pages docs > Direct Uploads
+//- see: FA docs > Web > Self-hosted SVG+JS (only hosting JS/SVG/CSS/Webfonts)
+
+script(type='module').
+	import { registerIconLibrary } from 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.88/dist/utilities/icon-library.js';
+
+	registerIconLibrary('fa', {
+		resolver: name => {
+			const filename = name.replace(/^fa[rsltdb]-/, '');
+			let folder = 'regular';
+			if (name.substring(0, 4) === 'fas-') folder = 'solid';
+			if (name.substring(0, 4) === 'fal-') folder = 'light';
+			if (name.substring(0, 4) === 'fat-') folder = 'thin';
+			if (name.substring(0, 4) === 'fad-') folder = 'duotone';
+			if (name.substring(0, 4) === 'fab-') folder = 'brands';
+			// sharp is not supported
+			return `https://font-awesome-6-2-1-web-pro.pages.dev/svgs/${folder}/${filename}.svg`;
+		},
+		mutator: svg => svg.setAttribute('fill', 'currentColor')
+	});

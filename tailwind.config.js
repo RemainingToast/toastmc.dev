@@ -23,7 +23,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				main: ['Kanit', 'ui-sans-serif', 'system-ui', 'sans-serif']
+				main: ['Kanit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				lato: ['Lato', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				space: ['Space Mono', 'ui-monospace', 'monospace']
 			},
 			colors: {
 				background,

@@ -12,6 +12,6 @@
   "bugs": "https://github.com/tycrek/tycrek.com/issues",
   "homepage": "https://github.com/tycrek/tycrek.com#readme",
   "dependencies": {
-    "pagery": "^0.1.0"
+    "pagery": "^0.2.0"
   }
 }

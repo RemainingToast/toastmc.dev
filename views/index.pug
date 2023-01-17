@@ -7,6 +7,8 @@ doctype html
 html.sl-theme-dark
 	head
 		include head
+		script.
+			window.onload = () => document.querySelector('#discord-modal').classList.remove('hidden');
 	body
 		img(src=data.data.avatar alt='profile icon')
 		h1.title tycrek
@@ -22,7 +24,7 @@ html.sl-theme-dark
 			+slLink('Spotify', 'https://open.spotify.com/user/nj8ajwl8yapcaw4p0t9bqi0rc', 'fab-spotify')
 			+slLink('Steam', 'https://steamcommunity.com/id/tycrek/', 'fab-steam')
 
-		sl-dialog#discord-modal(label='Contact via Discord')
+		sl-dialog.hidden#discord-modal(label='Contact via Discord')
 			h2.text-xl.font-lato To reach me on Discord, you can try to DM me at #[span.font-space tycrek#0001], but I can't guarantee replies.
 
 		include fontAwesomeScript

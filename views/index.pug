@@ -27,7 +27,7 @@ html.sl-theme-dark
 		sl-dialog.hidden#discord-modal(label='Contact via Discord')
 			h2.text-xl.font-lato To reach me on Discord, you can try to DM me at #[span.font-space tycrek#0001], but I can't guarantee replies.
 
-		include fontAwesomeScript
+		include ../node_modules/shoelace-fontawesome-pug/sl-fa-mixin.pug
 		script.
 			const modal = document.querySelector('#discord-modal');
 			document.querySelector('.text-discord.modal').addEventListener('click', () => modal.show());

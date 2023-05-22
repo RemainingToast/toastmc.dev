@@ -6,13 +6,26 @@
   "scripts": {
     "pagery": "node ./node_modules/pagery/dist/pagery.js --data=data.json"
   },
-  "repository": "github:tycrek/tycrek.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tycrek/tycrek.com.git"
+  },
   "author": "tycrek",
   "license": "ISC",
-  "bugs": "https://github.com/tycrek/tycrek.com/issues",
+  "bugs": {
+    "url": "https://github.com/tycrek/tycrek.com/issues"
+  },
   "homepage": "https://github.com/tycrek/tycrek.com#readme",
   "dependencies": {
+    "@tycrek/express-postcss": "^0.4.0",
+    "autoprefixer": "^10.4.14",
+    "express": "^4.18.2",
     "pagery": "^0.2.1",
-    "shoelace-fontawesome-pug": "^1.0.0-2"
-  }
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "pug": "^3.0.2",
+    "shoelace-fontawesome-pug": "^1.0.0-2",
+    "tailwindcss": "^3.3.2"
+  },
+  "keywords": []
 }

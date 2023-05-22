@@ -105,3 +105,6 @@ dist
 
 # generated HTML
 html
+
+# IntelliJ
+.idea

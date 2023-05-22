@@ -1,31 +1,28 @@
 //- Generic meta tags
 meta(charset='utf-8')
-title tycrek's Social Hub
-meta(name='description', content="tycrek's link hub. Get to any of my profiles from here.")
-link(rel='icon' href=data.data.avatar)
+title RemainingToast Hub
+meta(name='description', content="RemainingToast Hub. Get to any of my profiles from here.")
+link(rel='icon' href=data.avatar)
 
 //- Device/SEO meta
 meta(name='viewport', content='width=device-width,initial-scale=1.0,viewport-fit=cover')
-meta(name='keywords', content='tycrek,josh,moore,jmoore')
-meta(name='author', content='tycrek')
+meta(name='keywords', content='RemainingToast,2b2t,Australa,Aussie,Anarchy,ToastMc')
+meta(name='author', content='RemainingToast')
 
 //- CSS
-style
-	!= css
-
-//- Scripts
-script(async defer data-website-id='7625f992-ba2f-4dc0-afd8-fdb49f1adb4f' src='https://umami.jmoore.dev/umami.js')
+link(rel='stylesheet', href='/css/tailwind.css')
 
 //- Shoelace
 mixin slComp(name)
-	script(type='module' src=`${data.data.shoelaceCdn}/dist/components/${name}/${name}.js`)
+  script(type='module' src=`${data.shoelaceCdn}/dist/components/${name}/${name}.js`)
 
-link(rel='stylesheet' href=`${data.data.shoelaceCdn}/dist/themes/dark.css`)
+link(rel='stylesheet' href=`${data.shoelaceCdn}/dist/themes/dark.css`)
 +slComp('dialog')
 +slComp('icon')
 +slComp('icon-button')
 +slComp('tooltip')
 
-//- Cloudflare Web Analytics
-script(defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70c002e590ed43a78cb9a1a2289ed459"}')
-//- End Cloudflare Web Analytics
+style.
+  .title {
+    letter-spacing: 0.02em; /* Adjust the value as needed */
+  }

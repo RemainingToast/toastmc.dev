@@ -1,5 +1,5 @@
 {
-  "name": "tycrek.com",
+  "name": "toastmc.dev",
   "version": "3.0.0",
   "description": "Landing page for my username",
   "main": "dist/server.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tycrek/tycrek.com.git"
+    "url": "git+https://github.com/RemainingToast/toastmc.dev.git"
   },
-  "author": "tycrek",
+  "author": "RemainingToast",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tycrek/tycrek.com/issues"
+    "url": "https://github.com/RemainingToast/toastmc.dev/issues"
   },
-  "homepage": "https://github.com/tycrek/tycrek.com#readme",
+  "homepage": "https://github.com/RemainingToast/toastmc.dev#readme",
   "dependencies": {
     "@tycrek/express-postcss": "^0.4.0",
     "autoprefixer": "^10.4.14",
